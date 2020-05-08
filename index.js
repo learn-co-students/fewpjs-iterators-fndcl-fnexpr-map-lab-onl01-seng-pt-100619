@@ -14,14 +14,14 @@ let tutorials = [
 let result = []
 
 const title = tutorials.map(function(tutorial) {
-  let sentences = tutorial.split(" ") //returns an arrays of sentences
+  let sentences = tutorial.split(" ") //returns multiple arrays of words
   let upperCaseLettersWords = sentences.map(word =>
     word[0].toUpperCase() + word.slice(1)
         //  console.log(word[0].toUpperCase() + word.slice(1))
-    )
+    ) // changes the first letter of each word into uppercase and adds to rest of word
     
 
-    return upperCaseLettersWords.join(" ");
+    return upperCaseLettersWords.join(" "); // joins the words back into sentences
     // console.log(upperCaseLettersWords.join(" "))
   
   
@@ -29,6 +29,6 @@ const title = tutorials.map(function(tutorial) {
 });
 
 function titleCased() {
-  return title;
+  return title; // without return it returns undefined same as console.log that returns undefined the return has to be explicit in Javascript
 }
 
