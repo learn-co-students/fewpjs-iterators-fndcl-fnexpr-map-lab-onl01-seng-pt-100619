@@ -1,3 +1,5 @@
+
+// Take each index of tutorials array
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Contutorialuctor OO pattern?',
@@ -11,6 +13,12 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+function titleCased() {
+  let newArr = [];
+
+  tutorials.map(tut => {
+    let newStr = tut.split(" ").map(word => word[0].toUpperCase() + word.slice(1)).join(" ")
+    newArr.push(newStr)
+  })
+  return newArr
 }
